@@ -1,0 +1,24 @@
+#File created by Faizan Hamid on 12/01/2021
+
+import random
+print("Hello, what is your name?")
+user = input()
+print(f"Hello {user}. Welcome to game of guessing the number")
+
+r = random.randint(1,100)
+
+print("The number lies  between 1 and 100. So take a guess:")
+for i in range(10):
+    guess = int(input())
+
+    if guess < r:
+        print("Sorry, your guess is less than the number. Please try again")
+    elif guess > r:
+        print("Sorry, your guess is more than the number. Please try again")
+    else:
+        break   #guess must be equal to r
+
+if guess == r:
+    print("Congrats! You guessed the correct number i.e.", r)
+else:
+    print(f"Sorry you couldn't guess the correct number {r} even in 10 attempts")
